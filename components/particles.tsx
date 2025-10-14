@@ -86,10 +86,13 @@ const ParticlesComponent = (props: ParticlesComponentProps) => {
           value: 0.2,
         },
         shape: {
-          type: "circle",
+          type: "polygon",
+          polygon: {
+            sides: 6,
+          },
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 5, max: 10 },
         },
       },
       detectRetina: true,

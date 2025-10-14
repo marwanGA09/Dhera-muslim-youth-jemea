@@ -1,7 +1,6 @@
-"use client";
+'use client';
 
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
 
 const Footer = () => {
   return (
@@ -9,13 +8,10 @@ const Footer = () => {
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
+      className="py-8 text-center text-gray-400"
     >
-      <Card className="bg-gray-900 text-white rounded-t-lg">
-        <CardContent className="p-4 text-center">
-          <p>© 2025 Dera Muslim Youth Jemea. All rights reserved.</p>
-          <p>“Empowering Youth through Faith and Service.”</p>
-        </CardContent>
-      </Card>
+      <p>© 2025 Dera Muslim Youth Jemea. All rights reserved.</p>
+      <p className="mt-2">“Empowering Youth through Faith and Service.”</p>
     </motion.footer>
   );
 };

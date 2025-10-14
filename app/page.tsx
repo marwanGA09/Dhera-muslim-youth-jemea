@@ -36,7 +36,7 @@ export default function Home() {
         </p>
         <motion.div whileHover={{ scale: 1.1 }} className="space-x-4">
           <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">Join Us →</Button>
-          <Button size="lg" variant="outline" className="border-gray-700 hover:bg-gray-800">Donate Now</Button>
+          <Button size="lg" variant="outline" className="bg-accent-foreground">Donate Now</Button>
         </motion.div>
       </motion.section>
 
@@ -99,13 +99,13 @@ export default function Home() {
             </motion.div>
             <motion.div whileHover={cardHover} className="p-8 border border-gray-800 rounded-lg bg-gray-900">
                 <h3 className="text-2xl font-bold text-blue-400 mb-4">Spiritual Growth</h3>
-                <p className="text-gray-400">Through Qur'an circles, Islamic lectures, and spiritual retreats, we provide a space for youth to deepen their connection with Allah and strengthen their faith in a supportive environment.</p>
+                <p className="text-gray-400">Through Qur&apos;an circles, Islamic lectures, and spiritual retreats, we provide a space for youth to deepen their connection with Allah and strengthen their faith in a supportive environment.</p>
             </motion.div>
         </div>
       </motion.section>
 
       {/* Call to Action Section */}
-      <motion.section variants={itemVariants} className="text-center py-24 my-20 bg-gray-800 rounded-lg">
+      <motion.section variants={itemVariants} className="text-center py-24 my-20 border-gray-800  bg-gray-900 rounded-lg">
         <h2 className="text-4xl font-bold mb-4">Build a Stronger Ummah With Us</h2>
         <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">Join hands with Dera Muslim Youth Jemea and be a part of the change.</p>
         <motion.div whileHover={{ scale: 1.1 }}>

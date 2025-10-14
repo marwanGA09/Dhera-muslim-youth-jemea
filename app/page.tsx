@@ -14,7 +14,7 @@ export default function Home() {
 
   const itemVariants = {
     hidden: { y: 50, opacity: 0, scale: 0.9 },
-    visible: { y: 0, opacity: 1, scale: 1, transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] } },
+    visible: { y: 0, opacity: 1, scale: 1, transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] as [number, number, number, number] } },
   };
 
   const cardHover = { scale: 1.05, transition: { duration: 0.3 } };
@@ -105,7 +105,7 @@ export default function Home() {
       </motion.section>
 
       {/* Call to Action Section */}
-      <motion.section variants={itemVariants} className="text-center py-24 my-20 border-gray-800  bg-gray-900 rounded-lg">
+      <motion.section variants={itemVariants} className="text-center py-24 my-20 border border-gray-800  bg-gray-900 rounded-lg">
         <h2 className="text-4xl font-bold mb-4">Build a Stronger Ummah With Us</h2>
         <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">Join hands with Dera Muslim Youth Jemea and be a part of the change.</p>
         <motion.div whileHover={{ scale: 1.1 }}>

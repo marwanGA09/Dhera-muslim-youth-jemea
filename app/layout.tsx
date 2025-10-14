@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from 'next/link';
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,25 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-amber-50 text-gray-900`}
       >
-        <header>
-          <nav>
-            <ul>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/projects">Projects</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/donate">Donate</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </header>
-        {children}
-        <footer>
-          <p>© 2025 Dera Muslim Youth Jemea. All rights reserved.</p>
-          <p>“Empowering Youth through Faith and Service.”</p>
-        </footer>
+        <Header />
+        <main className="container mx-auto p-4">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

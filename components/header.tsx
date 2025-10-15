@@ -30,7 +30,7 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 ">
+    <header className="fixed top-0 left-0 right-0 z-50  backdrop-blur-sm">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-2xl font-bold">
           <Link href="/">DMYJ</Link>
@@ -42,10 +42,11 @@ export function Header() {
             <NavigationMenuList>
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.href}>
-                 
-                    <NavigationMenuLink href={link.href} className={navigationMenuTriggerStyle()}>
+                  <Link href={link.href}   className='text-lg font-medium text-muted-foreground hover:text-neutral-300 px-4'>
+                   
                       {link.label}
-                    </NavigationMenuLink>
+                   
+                  </Link>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>

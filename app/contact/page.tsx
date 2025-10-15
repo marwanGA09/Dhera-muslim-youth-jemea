@@ -2,32 +2,63 @@ import React from 'react';
 
 export default function ContactPage() {
   return (
-    <main>
-      <section>
-        <h1>Get In Touch</h1>
-        <p>
-          We welcome your questions, feedback, and ideas. Reach out to us for collaborations, volunteering, or general inquiries.
-        </p>
-      </section>
+    <main className="bg-gray-900 text-white h-full">
+      <div className="container mx-auto px-4 py-12">
+        <section className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
+          <p className="max-w-3xl mx-auto text-lg text-gray-400">
+            We welcome your questions, feedback, and ideas. Reach out to us for collaborations, volunteering, or general inquiries.
+          </p>
+        </section>
 
-      <section>
-        <h2>Contact Details</h2>
-        <ul>
-          <li>📍 Dera Town, Oromia Region, Ethiopia</li>
-          <li>📞 +251 9XX XXX XXX</li>
-          <li>📧 contact@derayouth.org</li>
-          <li>⏰ Office Hours: Mon–Sat, 9:00 AM – 5:00 PM</li>
-        </ul>
-      </section>
+        <div className="grid md:grid-cols-2 gap-8">
+          <section className="bg-gray-800 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold mb-6 text-teal-400">Contact Details</h2>
+            <ul className="space-y-4 text-lg">
+              <li className="flex items-start">
+                <span className="text-2xl mr-4">📍</span>
+                <span>Dera Town, Oromia Region, Ethiopia</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-2xl mr-4">📞</span>
+                <span>+251 9XX XXX XXX</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-2xl mr-4">📧</span>
+                <span>contact@derayouth.org</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-2xl mr-4">⏰</span>
+                <span>Office Hours: Mon–Sat, 9:00 AM – 5:00 PM</span>
+              </li>
+            </ul>
+          </section>
 
-      <section>
-        <h2>Social Media</h2>
-        <ul>
-          <li>Facebook: @DeraYouthJemea</li>
-          <li>Telegram: t.me/derayouth</li>
-          <li>Instagram: @derayouth_jemea</li>
-        </ul>
-      </section>
+          <section className="bg-gray-800 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold mb-6 text-teal-400">Social Media</h2>
+            <ul className="space-y-4 text-lg">
+              <li className="flex items-center">
+                <a href="#" className="hover:text-teal-400 transition duration-300 flex items-center">
+                  <span className="text-2xl mr-4">📘</span>
+                  <span>Facebook: @DeraYouthJemea</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a href="#" className="hover:text-teal-400 transition duration-300 flex items-center">
+                  <span className="text-2xl mr-4">✈️</span>
+                  <span>Telegram: t.me/derayouth</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a href="#" className="hover:text-teal-400 transition duration-300 flex items-center">
+                  <span className="text-2xl mr-4">📸</span>
+                  <span>Instagram: @derayouth_jemea</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </main>
   );
 }

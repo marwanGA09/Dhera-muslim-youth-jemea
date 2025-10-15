@@ -12,7 +12,7 @@ const Footer = () => {
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="bg-gray-900 text-gray-400 py-12"
+      className="bg-gray-900 text-gray-400 py-8 md:py-12"
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>

@@ -1,44 +1,82 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import * as React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
-const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/donate', label: 'Donate' },
+  { href: '/contact', label: 'Contact' },
+];
 
+export function Header() {
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-gray-900' : 'bg-transparent'
-      }`}
-    >
-      <nav className="container mx-auto flex justify-between items-center p-4 text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 ">
+      <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-2xl font-bold">
           <Link href="/">DMYJ</Link>
         </div>
-        <ul className="flex space-x-6">
-          <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
-          <li><Link href="/about" className="hover:text-blue-400 transition-colors">About</Link></li>
-          <li><Link href="/projects" className="hover:text-blue-400 transition-colors">Projects</Link></li>
-          <li><Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link></li>
-          <li><Link href="/donate" className="hover:text-blue-400 transition-colors">Donate</Link></li>
-          <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link></li>
-        </ul>
-      </nav>
-    </motion.header>
-  );
-};
 
-export default Header;
+        {/* Desktop Navigation */}
+        <div className="hidden md:block">
+          <NavigationMenu>
+            <NavigationMenuList>
+              {navLinks.map((link) => (
+                <NavigationMenuItem key={link.href}>
+                 
+                    <NavigationMenuLink href={link.href} className={navigationMenuTriggerStyle()}>
+                      {link.label}
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <Menu className="h-6 w-6" />
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-transparent backdrop-blur-sm">
+              <SheetHeader>
+                <SheetTitle className='text-white'>DMYJ</SheetTitle>
+              </SheetHeader>
+              <div className="grid gap-4 py-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-lg font-medium text-neutral-300 hover:text-neutral-500 px-4"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
+}

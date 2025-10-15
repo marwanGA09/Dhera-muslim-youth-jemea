@@ -27,11 +27,11 @@ export default function Home() {
       className="mt-32"
     >
       {/* Hero Section */}
-      <motion.section variants={itemVariants} className="text-center py-32">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+      <motion.section variants={itemVariants} className="text-center py-16 md:py-24">
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tighter mb-6">
           Empowering the Next Generation
         </h1>
-        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10">
+        <p className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10">
           Through Faith, Knowledge, and Service. We are a non-profit community organization committed to nurturing youth with strong Islamic values, leadership skills, and a sense of social responsibility.
         </p>
         <motion.div whileHover={{ scale: 1.1 }} className="space-x-4">
@@ -41,16 +41,16 @@ export default function Home() {
       </motion.section>
 
       {/* Mission & Vision Section */}
-      <motion.section variants={itemVariants} className="py-32">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <motion.section variants={itemVariants} className="py-16 md:py-24">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <motion.div variants={itemVariants} className="text-left">
-            <h2 className="text-4xl font-bold mb-4">Our Mission</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
             <p className="text-gray-400 text-lg">
               To create an active and conscious generation of Muslim youth who contribute positively to society through education, community service, and unity. We aim to instill a strong sense of purpose and a commitment to lifelong learning and service.
             </p>
           </motion.div>
           <motion.div variants={itemVariants} className="text-left">
-            <h2 className="text-4xl font-bold mb-4">Our Vision</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Vision</h2>
             <p className="text-gray-400 text-lg">
               To see a future where every Muslim youth is guided by Qur’anic principles, empowered with modern knowledge, and inspired to serve humanity with compassion and excellence. We envision a community of leaders who are proud of their faith and heritage.
             </p>
@@ -59,31 +59,31 @@ export default function Home() {
       </motion.section>
 
       {/* Values Section */}
-      <motion.section variants={itemVariants} className="py-32">
-        <h2 className="text-4xl font-bold text-center mb-16">Our Core Values</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <motion.section variants={itemVariants} className="py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Core Values</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <motion.div whileHover={cardHover} className="text-center p-8 border border-gray-800 rounded-lg bg-gray-900">
-            <h3 className="text-3xl font-bold text-blue-400 mb-3">Faith</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-3">Faith</h3>
             <p className="text-gray-500">Our foundation in every effort.</p>
           </motion.div>
           <motion.div whileHover={cardHover} className="text-center p-8 border border-gray-800 rounded-lg bg-gray-900">
-            <h3 className="text-3xl font-bold text-blue-400 mb-3">Unity</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-3">Unity</h3>
             <p className="text-gray-500">We rise together as one community.</p>
           </motion.div>
           <motion.div whileHover={cardHover} className="text-center p-8 border border-gray-800 rounded-lg bg-gray-900">
-            <h3 className="text-3xl font-bold text-blue-400 mb-3">Service</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-3">Service</h3>
             <p className="text-gray-500">We serve society as an act of worship.</p>
           </motion.div>
           <motion.div whileHover={cardHover} className="text-center p-8 border border-gray-800 rounded-lg bg-gray-900">
-            <h3 className="text-3xl font-bold text-blue-400 mb-3">Integrity</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-3">Integrity</h3>
             <p className="text-gray-500">Trust and transparency guide our work.</p>
           </motion.div>
         </div>
       </motion.section>
 
       {/* Programs Overview Section */}
-      <motion.section variants={itemVariants} className="py-32">
-        <h2 className="text-4xl font-bold text-center mb-16">What We Do</h2>
+      <motion.section variants={itemVariants} className="py-16 md:py-24">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What We Do</h2>
         <div className="grid md:grid-cols-2 gap-8">
             <motion.div whileHover={cardHover} className="p-8 border border-gray-800 rounded-lg bg-gray-900">
                 <h3 className="text-2xl font-bold text-blue-400 mb-4">Youth Development</h3>
@@ -105,9 +105,9 @@ export default function Home() {
       </motion.section>
 
       {/* Call to Action Section */}
-      <motion.section variants={itemVariants} className="text-center py-24 my-20 border border-gray-800  bg-gray-900 rounded-lg">
-        <h2 className="text-4xl font-bold mb-4">Build a Stronger Ummah With Us</h2>
-        <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">Join hands with Dera Muslim Youth Jemea and be a part of the change.</p>
+      <motion.section variants={itemVariants} className="text-center py-16 md:py-24 my-16 md:my-20 border border-gray-800  bg-gray-900 rounded-lg">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Build a Stronger Ummah With Us</h2>
+        <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">Join hands with Dera Muslim Youth Jemea and be a part of the change.</p>
         <motion.div whileHover={{ scale: 1.1 }}>
           <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">Get Involved Today →</Button>
         </motion.div>

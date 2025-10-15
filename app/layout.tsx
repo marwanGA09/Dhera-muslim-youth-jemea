@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
 import ParticlesComponent from "@/components/particles";
+import { ProgressBar } from "@/components/progress-bar";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-900 text-white`}>
         <ParticlesComponent id="tsparticles" />
         <Header />
+        <ProgressBar />
         <main className="container mx-auto p-4 relative z-10">
           {children}
         </main>

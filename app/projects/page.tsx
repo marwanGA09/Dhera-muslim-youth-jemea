@@ -24,20 +24,20 @@ export default function ProjectsPage() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="mt-32 space-y-24 md:space-y-32"
+      className="mt-24 md:mt-32 space-y-16 md:space-y-24"
     >
       {/* Hero Section */}
-      <motion.section variants={itemVariants} className="text-center py-16">
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tighter mb-6">
+      <motion.section variants={itemVariants} className="text-center py-8 md:py-16">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">
           Our Projects & Initiatives
         </h1>
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
           Every project we run reflects our belief that service is an act of worship. Here are some of our key initiatives:
         </p>
       </motion.section>
 
       {/* Projects Grid */}
-      <motion.section variants={itemVariants} className="py-16">
+      <motion.section variants={itemVariants} className="py-8 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div whileHover={cardHover}>
             <Card className="h-full bg-gray-900 border-gray-800">

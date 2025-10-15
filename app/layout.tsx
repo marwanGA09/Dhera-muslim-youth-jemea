@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
 import ParticlesComponent from "@/components/particles";
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-900 text-white`}>
         <ParticlesComponent id="tsparticles" />
         <Header />
-        <ProgressBar />
+        <Suspense fallback={null}>
+          <ProgressBar />
+        </Suspense>
         <main className="container mx-auto p-4 relative z-10">
           {children}
         </main>

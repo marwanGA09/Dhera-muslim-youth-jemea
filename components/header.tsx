@@ -6,9 +6,7 @@ import Link from 'next/link';
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import {
   Sheet,
